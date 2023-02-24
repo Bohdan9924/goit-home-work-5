@@ -139,7 +139,7 @@ button {
    position: absolute;
    bottom: 0;
    left: 0;
-   width: 48px;
+   width: 100%;
    height: 4px;
    background-color: var(--color-nav-hover);
    border-radius: 2px;;
@@ -228,7 +228,7 @@ button {
    border-radius: 4px;
 
    padding: 16px 32px;
-   
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-button:hover,
@@ -384,6 +384,13 @@ button {
    fill: var(--light-color);
    background-color: var(--color-logo-btn);
    border-radius: 50%;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+   background-color: var(--color-nav-hover);
 }
 
 .socials-icon {
@@ -391,10 +398,7 @@ button {
    height: 16px;
 }
 
-.socials-link:hover,
-.socials-link:focus {
-   background-color: var(--color-nav-hover);
-}
+
 
 /* Customers */
 
@@ -429,11 +433,8 @@ button {
    height: 100%;
    border: 1px solid var(--color-fill);
    border-radius: 4px;
-}
 
-.customers-logo {
-   width: 104px;
-   height: 56px;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customers-icon:hover,
@@ -441,6 +442,13 @@ button {
    border-color: var(--color-nav-hover);
    fill: var(--color-nav-hover);
 }
+
+.customers-logo {
+   width: 104px;
+   height: 56px;
+}
+
+
 
 
 /*footer*/
@@ -516,6 +524,8 @@ button {
    fill: var(--light-color);
    background-color: rgba(255, 255, 255, 0.1);
    border-radius: 50%;
+
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-link:hover,
@@ -552,6 +562,10 @@ button {
    font-family: inherit;
 
    padding: 12px 24px;
+
+   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 .filter-button:hover,
@@ -574,6 +588,7 @@ button {
 .work-link {
    display: block;
    text-decoration: none;
+   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-link:hover,
@@ -589,3 +604,35 @@ button {
 .works-text {
    padding: 32px 0 32px 16px;
 }
+
+.text-description {
+   position: absolute;
+   line-height: 1.5;
+   letter-spacing: 0.02em;
+   color: var(--light-color);
+   top: 40px;
+   left: 32px;
+   right: 32px;
+}
+
+.work-image {
+   position: relative;
+   overflow: hidden;
+}
+
+.work-description {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: var(--color-logo-btn);
+   transform: translateY(100%);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+   
+}
+
+.work-image:hover .work-description {
+   transform: translateY(0);
+}
+
