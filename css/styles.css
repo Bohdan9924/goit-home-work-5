@@ -577,6 +577,7 @@ button {
    background-color: var(--color-logo-btn);
    border-radius: 4px;
    border-color: var(--color-logo-btn);
+   /* delete */
 }
 
 .subscribe-icon {
